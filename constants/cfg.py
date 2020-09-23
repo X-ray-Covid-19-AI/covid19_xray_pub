@@ -1,0 +1,1 @@
+DATA_PATH_TABULAR = "C:\\Users\\Alacrity\\Documents\\Side Projects\\CovidXray\\"

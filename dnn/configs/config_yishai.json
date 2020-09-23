@@ -1,0 +1,64 @@
+{
+  "data_params": {
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225],
+    "train_dataset_path": "C:\\Users\Yishai\\Documents\\Corona\\data\\coronavirus_task\\train",
+    "test_dataset_path": "C:\\Users\Yishai\\Documents\\Corona\\data\\coronavirus_task\\test",
+    "aug_prob": 0,
+    "aug_params": {
+      "degree_max": 5,
+      "brightness_min": -50,
+      "brightness_max": -30,
+      "contrast_min": 1.5,
+      "contrast_max": 1.8,
+      "clahe_contrast_min": 1.2,
+      "clahe_contrast_max": 1.4
+    },
+    "image_size": 224,
+    "clahe": false,
+    "loader_params": {
+      "batch_size": 2,
+      "num_workers": 1,
+      "shuffle": false
+    }
+  },
+  "net_params": {
+    "pretrained": false,
+    "pretrained_weights_path": "",
+    "net_name": "resnet18",
+    "resnet18": {
+      "layers": [2, 2, 2, 2],
+      "freeze_layers": []
+    },
+    "vgg16": {}
+  },
+  "train_params": {
+    "checkpoint_relative_path": ".\\checkpoints",
+    "logging_dir_relative_path": ".\\log",
+    "eval_freq": 1,
+    "max_epochs": 100,
+    "optimizer_type": "Adam",
+    "Adam": {
+      "lr": 1e-4,
+      "weight_decay": 1e-4
+    },
+    "SGD": {
+      "lr": 1e-3,
+      "momentum": 0.9,
+      "weight_decay": 1e-4
+    },
+    "NAG": {
+      "lr": 1e-3,
+      "momentum": 0.9,
+      "weight_decay": 1e-4,
+      "nesterov": true
+    }
+  },
+  "eval_params":{
+    "weights_path": ""
+  },
+  "test_params": {
+  },
+  "gpu_list": [],
+  "show_visualizations": false
+}

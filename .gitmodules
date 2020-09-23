@@ -1,0 +1,3 @@
+[submodule "Segmentation/segmentation-2d"]
+	path = Segmentation/segmentation-2d
+	url = https://github.com/X-ray-Covid-19-AI/segmentation-2d

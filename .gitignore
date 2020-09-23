@@ -1,0 +1,11 @@
+*.iml
+*.xml
+.idea*
+venv*
+*__pycache__*
+*.csv
+*.xlsx
+*.png
+*.tif
+*.tiff
+*.jpg

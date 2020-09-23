@@ -1,0 +1,86 @@
+{
+  "data_params": {
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225],
+    "train_dataset_path": "/nih-yonina/workspace/training_tests/data_for_testing/all_xray_images/train",
+    "test_dataset_path": "/nih-yonina/workspace/training_tests/data_for_testing/all_xray_images/test",
+    "tabolar_data_path": "",
+    "aug_prob": 0,
+    "aug_params": {
+      "degree_max": 5,
+      "brightness_min": -50,
+      "brightness_max": -30,
+      "contrast_min": 1.5,
+      "contrast_max": 1.8,
+      "clahe_contrast_min": 1.2,
+      "clahe_contrast_max": 1.4
+    },
+    "image_size": 1024,
+    "clahe": false,
+    "loader_params": {
+      "batch_size": 10,
+      "num_workers": 8,
+      "shuffle": false
+    }
+  },
+  "net_params": {
+    "pretrained": false,
+    "net_name": "resnet18",
+    "resnet18": {
+      "layers": [2, 2, 2, 2],
+      "freeze_layers": [],
+	  "pretrained_weights_path": ""
+    },
+	"resnet34": {
+      "layers": [3, 4, 6, 3],
+      "freeze_layers": [],
+	  "pretrained_weights_path": ""
+    },
+	"resnet50": {
+      "layers": [3, 4, 6, 3],
+      "freeze_layers": [],
+	  "pretrained_weights_path": ""
+    },
+	"resnet101": {
+      "layers": [3, 4, 23, 3],
+      "freeze_layers": [],
+	  "pretrained_weights_path": ""
+    },
+	"resnet152": {
+      "layers": [3, 8, 36, 3],
+      "freeze_layers": [],
+	  "pretrained_weights_path": ""
+    },
+    "vgg16": {}
+  },
+  "train_params": {
+    "checkpoint_relative_path": ".\\checkpoints",
+    "logging_dir_relative_path": "log",
+	"resume": false,
+    "eval_freq": 2,
+    "max_epochs": 50,
+    "optimizer_type": "Adam",
+    "Adam": {
+      "lr": 2e-4,
+      "weight_decay": 1e-4
+    },
+    "SGD": {
+      "lr": 1e-3,
+      "momentum": 0.9,
+      "weight_decay": 1e-4
+    },
+    "NAG": {
+      "lr": 1e-3,
+      "momentum": 0.9,
+      "weight_decay": 1e-4,
+      "nesterov": true
+    }
+  },
+  "eval_params":{
+	"weights_path": ""
+  },
+  "test_params": {
+  },
+  "gpu_list": [],
+  "show_visualizations": false
+}
